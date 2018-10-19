@@ -4,6 +4,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         tools:context=".MainActivity"
         android:orientation="vertical">
 
@@ -16,7 +17,7 @@
 
     <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="540dp"
+            android:layout_height="545dp"
             tools:ignore="UselessLeaf"/>
 
     <View style="@style/HLine" />
@@ -24,6 +25,7 @@
     <android.support.design.widget.BottomNavigationView
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:id="@+id/bottomNavigationView"/>
+            android:id="@+id/bottomNavigationView"
+            app:menu="@menu/nav_project"/>
 
 </LinearLayout>
