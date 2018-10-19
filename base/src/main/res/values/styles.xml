@@ -21,4 +21,14 @@
         <item name="android:background">@color/colorPrimary</item>
     </style>
 
+    <style name="Content">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">540dp</item>
+    </style>
+
+    <style name="Navbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+    </style>
+
 </resources>

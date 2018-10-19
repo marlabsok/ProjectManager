@@ -16,15 +16,13 @@
     <View style="@style/HLine"/>
 
     <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="540dp"
-            tools:ignore="UselessLeaf"/>
+            style="@style/Content"
+            tools:ignore="UselessLeaf" android:id="@+id/fragmentLayout"/>
 
     <View style="@style/HLine" />
 
     <android.support.design.widget.BottomNavigationView
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
+            style="@style/Navbar"
             android:id="@+id/bottomNavigationView"
             app:menu="@menu/nav_project"/>
 
