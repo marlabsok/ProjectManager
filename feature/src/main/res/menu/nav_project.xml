@@ -3,6 +3,6 @@
       xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/new_game"
           android:icon="@drawable/ic_action_add"
-          android:title="Новый проект"
+          android:title="@string/menu_new_project"
           app:showAsAction="ifRoom"/>
 </menu>

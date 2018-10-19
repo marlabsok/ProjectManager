@@ -17,7 +17,7 @@
 
     <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="545dp"
+            android:layout_height="540dp"
             tools:ignore="UselessLeaf"/>
 
     <View style="@style/HLine" />
