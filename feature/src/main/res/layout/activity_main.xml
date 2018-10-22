@@ -20,7 +20,8 @@
           tools:ignore="MissingConstraints" android:id="@+id/view2"/>
 
     <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
-                 android:paddingVertical="?actionBarSize"
+                 android:paddingBottom="?actionBarSize"
+                 android:paddingTop="?actionBarSize"
                  android:id="@+id/fragmentContainer"/>
     <View style="@style/HLine" tools:layout_editor_absoluteX="0dp"
           app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView" tools:ignore="MissingConstraints"
