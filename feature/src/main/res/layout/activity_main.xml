@@ -17,10 +17,14 @@
     />
 
     <View style="@style/HLine" tools:layout_editor_absoluteX="16dp" app:layout_constraintTop_toBottomOf="@+id/toolbar"
-          tools:ignore="MissingConstraints" android:id="@+id/view"/>
+          tools:ignore="MissingConstraints" android:id="@+id/view2"/>
 
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                 android:paddingVertical="?actionBarSize"
+                 android:id="@+id/fragmentContainer"/>
     <View style="@style/HLine" tools:layout_editor_absoluteX="0dp"
-          app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView" tools:ignore="MissingConstraints"/>
+          app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView" tools:ignore="MissingConstraints"
+          android:id="@+id/view"/>
 
     <android.support.design.widget.BottomNavigationView
             style="@style/Navbar"
