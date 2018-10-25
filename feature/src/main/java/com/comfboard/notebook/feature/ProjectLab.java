@@ -1,5 +1,7 @@
 package com.comfboard.notebook.feature;
 
+import android.content.Context;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -7,7 +9,7 @@ import java.util.UUID;
 public class ProjectLab {
     private static ProjectLab lab;
 
-    public static ProjectLab get(){
+    public static ProjectLab get(Context context){
         if (lab == null){
             lab = new ProjectLab();
         }

@@ -6,6 +6,6 @@
     <TextView
             style="@style/ProjectView"
             tools:text="Project"
-              />
+            android:id="@+id/tv_name"/>
 
 </FrameLayout>
