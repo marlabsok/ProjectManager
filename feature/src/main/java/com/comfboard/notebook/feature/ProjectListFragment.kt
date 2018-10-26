@@ -1,5 +1,6 @@
 package com.comfboard.notebook.feature
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
@@ -8,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 
 class ProjectListFragment : Fragment() {
 
@@ -32,10 +34,26 @@ class ProjectListFragment : Fragment() {
     }
 
     //Holder
-    private inner class ProjectHolder(itemView: View): RecyclerView.ViewHolder(itemView){
+    private inner class ProjectHolder(itemView: View): RecyclerView.ViewHolder(itemView),
+        View.OnClickListener,
+        View.OnLongClickListener{
+
         val mTextViewTitle: TextView = itemView.findViewById<View>(R.id.tv_name) as TextView
 
         var project: Project? = null
+        init {
+            itemView.setOnClickListener(this)
+            itemView.setOnLongClickListener(this)
+        }
+
+        override fun onClick(v: View) {
+            Toast.makeText(activity, "Click", Toast.LENGTH_LONG).show()
+        }
+
+        override fun onLongClick(v: View?): Boolean {
+            Toast.makeText(activity, "Long Click", Toast.LENGTH_LONG).show()
+            return true
+        }
     }
 
     //Адаптор
@@ -52,7 +70,7 @@ class ProjectListFragment : Fragment() {
         override fun onBindViewHolder(holder: ProjectHolder, position: Int) {
             holder.project = mProjects[position]
 
-//            holder.mTextViewTitle.text = holder.project!!.title
+            holder.mTextViewTitle.text = holder.project!!.title
         }
 
         override fun getItemCount(): Int {

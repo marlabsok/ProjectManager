@@ -22,6 +22,14 @@ public class ProjectLab {
 
     private ProjectLab(){
         mProjects = new ArrayList<>();
+
+        for (int i = 0; i < 10; i++){
+            Project p = new Project();
+            p.setTitle("Проект #" + i);
+            this.addProject(p);
+        }
+
+
     }
 
     public List<Project> getProjects(){
@@ -30,7 +38,7 @@ public class ProjectLab {
 
     public Project getProject(UUID id){
         for (Project project : mProjects) {
-            if (/*project.getId().equals(id)*/ true) {
+            if (project.getId().equals(id)) {
                 return project;
             }
         }
@@ -43,7 +51,7 @@ public class ProjectLab {
 
     public void removeProject(UUID id){
         for (Project project : mProjects) {
-            if (/*project.getId().equals(id)*/ true) {
+            if (project.getId().equals(id)) {
                 mProjects.remove(project);
             }
         }
