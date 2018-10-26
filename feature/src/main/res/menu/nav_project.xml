@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:app="http://schemas.android.com/apk/res-auto"
-      xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/new_project"
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/meta"
           android:icon="@drawable/ic_action_add"
-          android:title="@string/menu_new_project"
+          android:title="@string/menu_meta"
+          app:showAsAction="ifRoom"/>
+    <item android:id="@+id/todo"
+          android:icon="@drawable/ic_action_add"
+          android:title="@string/menu_todo"
+          app:showAsAction="ifRoom"/>
+    <item android:id="@+id/note"
+          android:icon="@drawable/ic_action_add"
+          android:title="@string/menu_note"
           app:showAsAction="ifRoom"/>
 </menu>

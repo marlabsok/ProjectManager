@@ -4,4 +4,10 @@
 
     <string name="menu_user">Пользователь</string>
     <string name="menu_new_project">Новый проект</string>
+
+    <string name="menu_meta">Описание</string>
+    <string name="menu_todo">Список</string>
+    <string name="menu_note">Заметка</string>
+
+
 </resources>

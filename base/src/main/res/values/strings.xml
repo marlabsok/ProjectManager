@@ -3,4 +3,9 @@
 
     <string name="menu_user">User</string>
     <string name="menu_new_project">New Project</string>
+
+    <string name="menu_meta">Description</string>
+    <string name="menu_todo">ToDo</string>
+    <string name="menu_note">Note</string>
+
 </resources>
