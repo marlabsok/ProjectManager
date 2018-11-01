@@ -25,15 +25,6 @@ class ProjectActivity : AppCompatActivity() {
 
         val bottomBar = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
 
-        bottomBar!!.setOnNavigationItemSelectedListener { item ->
-            when(item.itemId){
-                R.id.meta -> Toast.makeText(this@ProjectActivity, R.string.menu_meta, Toast.LENGTH_SHORT).show()
-                R.id.todo -> Toast.makeText(this@ProjectActivity, R.string.menu_todo, Toast.LENGTH_SHORT).show()
-                R.id.note -> Toast.makeText(this@ProjectActivity, R.string.menu_note, Toast.LENGTH_SHORT).show()
-            }
-            false
-        }
-
         mFragment = mFm.findFragmentById(R.id.fragmentContainer)
         if (mFragment == null) {
             mFragment = ProjectMetaFragment.newInstance(mId)
@@ -41,6 +32,23 @@ class ProjectActivity : AppCompatActivity() {
                 .add(R.id.fragmentContainer, this.mFragment as ProjectMetaFragment)
                 .commit()
         }
+
+        bottomBar!!.setOnNavigationItemSelectedListener { item ->
+
+            when(item.itemId){
+                R.id.meta -> {
+                    Toast.makeText(this@ProjectActivity, R.string.menu_meta, Toast.LENGTH_SHORT).show()
+                }
+                R.id.todo -> {
+                    Toast.makeText(this@ProjectActivity, R.string.menu_todo, Toast.LENGTH_SHORT).show()
+                }
+                R.id.note ->{
+                    Toast.makeText(this@ProjectActivity, R.string.menu_note, Toast.LENGTH_SHORT).show()
+                }
+            }
+            false
+        }
+
     }
 
 
