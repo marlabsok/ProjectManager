@@ -1,5 +1,7 @@
 package com.comfboard.notebook.feature
 
+import android.content.Context
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
@@ -8,6 +10,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import android.widget.Toolbar
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,7 +25,12 @@ class MainActivity : AppCompatActivity() {
 
         bottomBar!!.setOnNavigationItemSelectedListener { item ->
             when(item.itemId){
-                R.id.new_project -> Toast.makeText(this@MainActivity, R.string.menu_new_project, Toast.LENGTH_SHORT).show()
+                R.id.new_project -> {
+                    val project : Project = Project()
+                    intent = newIntent(this@MainActivity, project.id)
+                    startActivity(intent)
+                    Toast.makeText(this@MainActivity, R.string.menu_new_project, Toast.LENGTH_SHORT).show()
+                }
             }
             false
         }
@@ -55,6 +63,17 @@ class MainActivity : AppCompatActivity() {
                 else -> return false
             }
             return true
+        }
+
+    }
+
+    companion object {
+        val EXTRA_LIST_ID = "com.comfboard.android.lists.list_id"
+
+        fun newIntent(packageContext: Context, id: UUID): Intent {
+            val intent = Intent(packageContext, ProjectActivity::class.java)
+            intent.putExtra(EXTRA_LIST_ID, id.toString())
+            return intent
         }
     }
 }

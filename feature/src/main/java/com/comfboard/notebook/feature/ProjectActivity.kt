@@ -1,5 +1,6 @@
 package com.comfboard.notebook.feature
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
@@ -21,7 +22,9 @@ class ProjectActivity : AppCompatActivity() {
 
         bottomBar!!.setOnNavigationItemSelectedListener { item ->
             when(item.itemId){
-                R.id.meta -> Toast.makeText(this@ProjectActivity, R.string.menu_new_project, Toast.LENGTH_SHORT).show()
+                R.id.meta -> Toast.makeText(this@ProjectActivity, R.string.menu_meta, Toast.LENGTH_SHORT).show()
+                R.id.todo -> Toast.makeText(this@ProjectActivity, R.string.menu_todo, Toast.LENGTH_SHORT).show()
+                R.id.note -> Toast.makeText(this@ProjectActivity, R.string.menu_note, Toast.LENGTH_SHORT).show()
             }
             false
         }
@@ -34,4 +37,6 @@ class ProjectActivity : AppCompatActivity() {
                 .commit()
         }
     }
+
+
 }

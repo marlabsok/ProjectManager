@@ -4,10 +4,12 @@
           android:icon="@drawable/ic_action_add"
           android:title="@string/menu_meta"
           app:showAsAction="ifRoom"/>
+
     <item android:id="@+id/todo"
           android:icon="@drawable/ic_action_add"
           android:title="@string/menu_todo"
           app:showAsAction="ifRoom"/>
+
     <item android:id="@+id/note"
           android:icon="@drawable/ic_action_add"
           android:title="@string/menu_note"
