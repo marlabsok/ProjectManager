@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
+import java.util.*
 
 class ProjectActivity : AppCompatActivity() {
 
@@ -31,9 +32,9 @@ class ProjectActivity : AppCompatActivity() {
 
         mFragment = mFm.findFragmentById(R.id.fragmentContainer)
         if (mFragment == null) {
-            mFragment = ProjectListFragment()
+            mFragment = ProjectMetaFragment.newInstance(UUID.randomUUID().toString())
             mFm.beginTransaction()
-                .add(R.id.fragmentContainer, this.mFragment as ProjectListFragment)
+                .add(R.id.fragmentContainer, this.mFragment as ProjectMetaFragment)
                 .commit()
         }
     }
