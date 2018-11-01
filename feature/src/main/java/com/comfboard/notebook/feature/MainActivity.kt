@@ -68,11 +68,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     companion object {
-        val EXTRA_LIST_ID = "com.comfboard.android.lists.list_id"
+        val EXTRA_PROJECT_ID = "com.comfboard.android.lists.list_id"
 
         fun newIntent(packageContext: Context, id: UUID): Intent {
             val intent = Intent(packageContext, ProjectActivity::class.java)
-            intent.putExtra(EXTRA_LIST_ID, id.toString())
+            intent.putExtra(EXTRA_PROJECT_ID, id.toString())
             return intent
         }
     }

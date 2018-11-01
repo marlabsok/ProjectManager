@@ -48,6 +48,8 @@ class ProjectListFragment : Fragment() {
 
         override fun onClick(v: View) {
             Toast.makeText(activity, "Click", Toast.LENGTH_LONG).show()
+            val intent = MainActivity.newIntent(context!!.applicationContext, project!!.id)
+            startActivity(intent)
         }
 
         override fun onLongClick(v: View?): Boolean {

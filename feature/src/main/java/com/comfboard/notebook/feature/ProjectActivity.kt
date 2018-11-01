@@ -19,6 +19,10 @@ class ProjectActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_project)
 
+        val bundle = intent.extras
+
+        val mId = UUID.fromString(bundle.getString(MainActivity.EXTRA_PROJECT_ID)).toString()
+
         val bottomBar = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
 
         bottomBar!!.setOnNavigationItemSelectedListener { item ->
@@ -32,7 +36,7 @@ class ProjectActivity : AppCompatActivity() {
 
         mFragment = mFm.findFragmentById(R.id.fragmentContainer)
         if (mFragment == null) {
-            mFragment = ProjectMetaFragment.newInstance(UUID.randomUUID().toString())
+            mFragment = ProjectMetaFragment.newInstance(mId)
             mFm.beginTransaction()
                 .add(R.id.fragmentContainer, this.mFragment as ProjectMetaFragment)
                 .commit()

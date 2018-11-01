@@ -8,11 +8,11 @@
 
     <EditText android:layout_width="match_parent"
               android:layout_height="wrap_content"
-              android:id="@+id/title" android:inputType=""/>
+              android:id="@+id/title_project" android:inputType=""/>
 
     <EditText android:layout_width="match_parent"
               android:layout_height="wrap_content"
-              android:id="@+id/description"/>
+              android:id="@+id/description_project"/>
 
 
 </LinearLayout>
